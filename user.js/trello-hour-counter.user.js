@@ -63,10 +63,14 @@
                 });
             }
 
-            cal_btn.bind("click",  calc);
+            function calcAll() {
+                calc();
+                calcEveryList();
+            }
+
+            cal_btn.bind("click",  calcall);
             $("div.board-header").append(cal_btn);
-            calc();
-            calcEveryList();
+            calcAll();
         }
 
         setTimeout(put_time_label,2000);
