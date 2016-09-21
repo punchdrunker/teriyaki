@@ -59,20 +59,17 @@
                         }
                     });
                     var target = $(v).find('.list-header')[0];
-                    $(target).append('<p>' + hours + 'h</p>')
+                    $(target).append('<h2>' + hours + 'h</h2>')
                 });
             }
 
-            function calcAll() {
-                calc();
-                calcEveryList();
-            }
-
-            cal_btn.bind("click",  calcall);
+            cal_btn.bind("click",  calc);
             $("div.board-header").append(cal_btn);
-            calcAll();
+            calc();
+            calcEveryList();
         }
 
         setTimeout(put_time_label,2000);
     });
 });
+
